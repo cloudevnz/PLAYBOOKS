@@ -1,0 +1,19 @@
+---
+-
+  hosts: win 
+  tasks: 
+    - 
+      name: "install and pin Notepad++ at 7.6.3"
+      win_chocolatey: 
+        name: notepadplusplus
+        pinned: true
+        version: "7.6.3"
+
+
+
+
+
+
+
+
+

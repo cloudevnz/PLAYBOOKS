@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+   - name: Add a local and domain user to a local group
+     win_group_membership:
+         name: Remote Desktop Users
+         members:
+          - Ansible_test          
+         state: present

@@ -1,0 +1,19 @@
+---
+- name: Create new AD Domain & Forest
+  hosts: all
+  vars:
+    temp_address: 192.168.4.133
+    dc_address: 192.168.7.121
+    dc_netmask_cidr: 24
+    dc_gateway: 192.168.7.99
+    dc_hostname: 'dc01'
+    domain_name: "cloudev.lab"
+    local_admin: '.\Administrator'
+    temp_password: '@Liyaan110'
+    dc_password: '@Liyaan110'
+    recovery_password: 'Y@@li@110'
+    upstream_dns_1: 114.23.1.1
+    upstream_dns_2: 114.23.2.2
+    reverse_dns_zone: "192.168.7.0/24"
+    ntp_server: "0.us.pool.ntp.org,1.us.pool.ntp.org,2.us.pool.ntp.org,3.us.pool.ntp.org"
+  gather_facts: no
